@@ -3,6 +3,6 @@ war/VAADIN/widgetsets
 src/com/compracoletiva/main/widgetset/
 target/
 war/WEB-INF/classes/
-.DS_Store/
+.DS_Store
 .project/
 .settings/
