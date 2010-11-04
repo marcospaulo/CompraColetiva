@@ -1,18 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com</groupId>
 	<artifactId>compracoletiva</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Compra Coletiva Project</name>
-	<!-- <url>http://www.streamhead.com</url> -->
 	<properties>
 		<spring.version>3.0.0.RELEASE</spring.version>
 		<aspectj.version>1.6.3</aspectj.version>
 		<vaadin.version>6.4.7</vaadin.version>
 		<appengine.version>1.3.8</appengine.version>
-        <datanucleus.version>1.1.5</datanucleus.version>
+		<datanucleus.version>1.1.5</datanucleus.version>
+		<imagescaler.version>1.0</imagescaler.version>
 	</properties>
 
 	<dependencies>
@@ -41,7 +41,7 @@
 			<artifactId>datanucleus-core</artifactId>
 			<version>${datanucleus.version}</version>
 		</dependency>
-				<dependency>
+		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-jpa_3.0_spec</artifactId>
 			<version>1.1.1</version>
@@ -62,24 +62,24 @@
 			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-core</artifactId>
-    		<version>${spring.version}</version>
-  		</dependency>
-  		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-beans</artifactId>
-    		<version>${spring.version}</version>
-  		</dependency>
-  		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-context</artifactId>
-    		<version>${spring.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
-  		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-web</artifactId>
-    		<version>${spring.version}</version>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -105,6 +105,16 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.objectify</groupId>
+			<artifactId>objectify</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.vaadin.addons</groupId>
+			<artifactId>imagescaler</artifactId>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 
@@ -171,7 +181,7 @@
 				<artifactId>aspectj-maven-plugin</artifactId>
 				<version>1.0</version>
 				<dependencies>
-				<dependency>
+					<dependency>
 						<groupId>org.aspectj</groupId>
 						<artifactId>aspectjrt</artifactId>
 						<version>${aspectj.version}</version>
@@ -181,7 +191,7 @@
 						<artifactId>aspectjtools</artifactId>
 						<version>${aspectj.version}</version>
 					</dependency>
-    			</dependencies>
+				</dependencies>
 				<executions>
 					<execution>
 						<goals>
@@ -249,12 +259,23 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<repositories>
 		<repository>
 			<id>www.mvnsearch.org</id>
 			<name>Maven search repository</name>
 			<url>http://www.mvnsearch.org/maven2/</url>
 		</repository>
+
+		<repository>
+			<id>objectify-appengine</id>
+			<url>http://objectify-appengine.googlecode.com/svn/maven</url>
+		</repository>
+
+		<repository>
+			<id>vaadin-addons</id>
+			<url>http://maven.vaadin.com/vaadin-addons</url>
+		</repository>
 	</repositories>
+
 </project>
