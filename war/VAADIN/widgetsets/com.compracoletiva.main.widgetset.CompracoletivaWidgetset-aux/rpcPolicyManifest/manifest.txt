@@ -1,2 +1,0 @@
-# Module com.compracoletiva.main.widgetset.CompracoletivaWidgetset
-# RPC service class, partial path of RPC policy file
