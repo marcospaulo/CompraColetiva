@@ -11,47 +11,65 @@
 		<param-value>false</param-value>
 	</context-param>
 
-	<!--	<servlet>-->
-	<!--		<servlet-name>Compracoletiva Application</servlet-name>-->
+	<!--		<servlet>-->
+	<!--			<servlet-name>Compracoletiva Application</servlet-name>-->
+<!---->
 	<!--
 		<servlet-class>com.vaadin.terminal.gwt.server.GAEApplicationServlet</servlet-class>
 	-->
-	<!--		<init-param>-->
-	<!--			<description> Vaadin application class to-->
-	<!--		start</description>-->
-	<!--			<param-name>application</param-name>-->
-	<!--
-		<param-value>com.compracoletiva.main.CompracoletivaApplicationController</param-value>
-	-->
-	<!--		</init-param>-->
-	<!--		<init-param>-->
-	<!--			<description>-->
-	<!--			Application widgetset</description>-->
-	<!--			<param-name>widgetset</param-name>-->
-	<!--
-		<param-value>com.compracoletiva.main.widgetset.CompracoletivaWidgetset</param-value>
-	-->
-	<!--		</init-param>-->
-	<!--	</servlet>-->
-	<!--	<servlet-mapping>-->
-	<!--		<servlet-name>Compracoletiva Application</servlet-name>-->
-	<!--		<url-pattern>/*</url-pattern>-->
-	<!--	</servlet-mapping>-->
 	<!--	-->
+	<!--			<init-param>-->
+	<!--				<description> Vaadin application class to-->
+	<!--				start</description>-->
+	<!--				<param-name>application</param-name>-->
+<!---->
+	<!--	-->
+	<!--
+		<param-value>com.compracoletiva.main.CompraColetivaApp</param-value>
+	-->
+	<!--	-->
+	<!--			</init-param>-->
+<!---->
+	<!--		</servlet>-->
+<!---->
+	<!--			<servlet-mapping>-->
+	<!--				<servlet-name>Compracoletiva Application</servlet-name>-->
+	<!--				<url-pattern>/*</url-pattern>-->
+	<!--			</servlet-mapping>-->
+
 	<servlet>
 		<servlet-name>CompraColetiva Application</servlet-name>
+
 		<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
+
 		<init-param>
 			<description>
-  		Vaadin application class to start</description>
+	  		Vaadin application class to start</description>
 			<param-name>application</param-name>
+
 			<param-value>com.compracoletiva.main.CompraColetivaApp</param-value>
+
+		</init-param>
+		<init-param>
+			<description>
+			Application widgetset</description>
+			<param-name>widgetset</param-name>
+			<param-value>com.compracoletiva.main.widgetset.CompracoletivaWidgetset</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>CompraColetiva Application</servlet-name>
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
