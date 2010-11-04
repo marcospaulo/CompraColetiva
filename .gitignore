@@ -2,3 +2,6 @@ war/WEB-INF/lib
 war/VAADIN/widgetsets
 src/com/compracoletiva/main/widgetset/
 target/
+.DS_Store/
+.project/
+.settings/
