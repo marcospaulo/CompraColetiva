@@ -1,15 +1,13 @@
 package com.compracoletiva.main;
 
-import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.stereotype.Service;
-
 import com.compracoletiva.presenters.MainPresenter;
 import com.compracoletiva.spring.SpringHelper;
 import com.vaadin.Application;
+import com.vaadin.ui.Alignment;
+import com.vaadin.ui.Layout;
+import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
 
-@Service
-@Configurable(preConstruction=true)
 public class CompraColetivaApp extends Application {
 
 	/**
@@ -25,8 +23,17 @@ public class CompraColetivaApp extends Application {
 		SpringHelper helper = SpringHelper.getInstance();
 		helper.startApplication(this);
 		mainPresenter = (MainPresenter) helper.getBean("myBean");
-		mainWindow.addComponent(mainPresenter.getMainView());
+		mainWindow.setBorder(Window.BORDER_NONE);
+
+		VerticalLayout vLayoutTotal = new VerticalLayout();
+		Layout mainView = mainPresenter.getMainView();
+		vLayoutTotal.addComponent(mainView);
+		vLayoutTotal.setComponentAlignment(mainView, Alignment.TOP_CENTER);
+
+		
+		mainWindow.addComponent(vLayoutTotal);
 		setMainWindow(mainWindow);
+		setTheme("applicationtheme");
 	}
 
 }
