@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Minha primeira aplicação usando JQuery</title>
+
+<style type="text/css">
+.slideshow {
+	height: 232px;
+	width: 930px;
+	margin: auto
+}
+
+<!--.slideshow img {-->
+<!--	padding: 15px;-->
+<!--	border: 1px solid #ccc;-->
+<!--	background-color: #eee;-->
+<!--}-->
+</style>
+<!-- include jQuery library -->
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<!-- include Cycle plugin -->
+<script type="text/javascript"
+	src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.74.js"></script>
+
+</head>
+<body>
+
+<div class="slideshow"><img
+	src="http://www.baixaki.com.br/imagens/wpapers/BXK20205_imagem-020800.jpg"
+	width="912" height="320" /> <img
+	src="http://www.machape2005.blogger.com.br/Beach%20Park%20011.jpg"
+	width="912" height="320" /> <img
+	src="http://www.machape2005.blogger.com.br/Beach%20Park%20017.jpg"
+	width="912" height="320" /> <img
+	src="http://i147.photobucket.com/albums/r320/jovazin/Projetos/01-39.jpg"
+	width="912" height="320" /> </div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+</script>
+
+
+
+</body>
+</html>
