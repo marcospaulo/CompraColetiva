@@ -10,57 +10,44 @@
 		<param-name>productionMode</param-name>
 		<param-value>false</param-value>
 	</context-param>
-
-	<!--		<servlet>-->
-	<!--			<servlet-name>Compracoletiva Application</servlet-name>-->
-<!---->
-	<!--
-		<servlet-class>com.vaadin.terminal.gwt.server.GAEApplicationServlet</servlet-class>
-	-->
-	<!--	-->
-	<!--			<init-param>-->
-	<!--				<description> Vaadin application class to-->
-	<!--				start</description>-->
-	<!--				<param-name>application</param-name>-->
-<!---->
-	<!--	-->
-	<!--
-		<param-value>com.compracoletiva.main.CompraColetivaApp</param-value>
-	-->
-	<!--	-->
-	<!--			</init-param>-->
-<!---->
-	<!--		</servlet>-->
-<!---->
-	<!--			<servlet-mapping>-->
-	<!--				<servlet-name>Compracoletiva Application</servlet-name>-->
-	<!--				<url-pattern>/*</url-pattern>-->
-	<!--			</servlet-mapping>-->
-
+	
+		<!--Configuração do Servlet para rodar no GAE -->
 	<servlet>
-		<servlet-name>CompraColetiva Application</servlet-name>
-
-		<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
-
+		<servlet-name>Compracoletiva Application</servlet-name>
+		<servlet-class>com.vaadin.terminal.gwt.server.GAEApplicationServlet</servlet-class>
 		<init-param>
-			<description>
-	  		Vaadin application class to start</description>
+			<description> Vaadin application class to
+					start</description>
 			<param-name>application</param-name>
-
 			<param-value>com.compracoletiva.main.CompraColetivaApp</param-value>
-
-		</init-param>
-		<init-param>
-			<description>
-			Application widgetset</description>
-			<param-name>widgetset</param-name>
-			<param-value>com.compracoletiva.main.widgetset.CompracoletivaWidgetset</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CompraColetiva Application</servlet-name>
+		<servlet-name>Compracoletiva Application</servlet-name>
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
+	
+	<!--Configuração do Servlet para rodar no Tomcat -->
+<!--	<servlet>-->
+<!--		<servlet-name>CompraColetiva Application</servlet-name>-->
+<!--		<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>-->
+<!--		<init-param>-->
+<!--			<description>-->
+<!--		  		Vaadin application class to start</description>-->
+<!--			<param-name>application</param-name>-->
+<!--			<param-value>com.compracoletiva.main.CompraColetivaApp</param-value>-->
+<!--		</init-param>-->
+<!--		<init-param>-->
+<!--			<description>-->
+<!--				Application widgetset</description>-->
+<!--			<param-name>widgetset</param-name>-->
+<!--			<param-value>com.compracoletiva.main.widgetset.CompracoletivaWidgetset</param-value>-->
+<!--		</init-param>-->
+<!--	</servlet>-->
+<!--	<servlet-mapping>-->
+<!--		<servlet-name>CompraColetiva Application</servlet-name>-->
+<!--		<url-pattern>/*</url-pattern>-->
+<!--	</servlet-mapping>-->
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
