@@ -88,7 +88,7 @@ public class MainViewImpl implements MainView, Serializable {
 			public void buttonClick(ClickEvent event) {
 				formularioDeEmailForm.commit();
 				topLayout.getWindow().showNotification(
-						"Emails cadastrados com sucesso!!");
+						"Email cadastrado com sucesso!!");
 			}
 		});
 
@@ -120,8 +120,8 @@ public class MainViewImpl implements MainView, Serializable {
 
 		Label noticia = new Label();
 		
-		noticia.setValue("PROMOÇÃO DE INAUGURAÇÃO!!! DESCONTO DE 80% NO "
-				+ "BEACH PARK... CORRA, SÃO APENAS 200 INGRESSOS");
+		noticia.setValue("PROMO√á√ÉO DE INAUGURA√á√ÉO!!! DESCONTO DE 80% NO "
+				+ "BEACH PARK... CORRA, S√ÉO APENAS 200 INGRESSOS");
 		noticia.setStyleName("anuncio");
 
 		Embedded e = new Embedded("", new ThemeResource("layouts/teste.html"));

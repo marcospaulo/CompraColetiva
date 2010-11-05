@@ -33,11 +33,11 @@ public class InformacoesContatoFieldFactory extends DefaultFieldFactory {
 			TextField tf = (TextField) f;
 			tf.setRequired(true);
 			tf
-					.setRequiredError("Seu e-mail é muito importante para nós, não deixe de colocá-lo");
+					.setRequiredError("Seu e-mail √© muito importante para n√≥s, n√£o deixe de coloc√°-lo");
 			tf.setWidth(COMMON_FIELD_WIDTH);
 			tf
 					.addValidator(new EmailValidator(
-							"Xii!! Algo está errado, por favor, verifique seu e-mail novamente"));
+							"Xii!! Algo est√° errado, por favor, verifique seu e-mail novamente"));
 
 		}
 
