@@ -2,7 +2,7 @@ package com.compracoletiva.view.main;
 
 public enum ItensDaBarraDeMenu {
 
-	OFERTA_DO_DIA("Oferta do dia"), OFERTAS_ANTERIORES("Ofertas anteriores");
+	OFERTA_DO_DIA("Grande Lance do Dia"), OFERTAS_ANTERIORES("Grande Lances Anteriores");
 
 	private String nome;
 
