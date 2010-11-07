@@ -26,7 +26,6 @@
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="var" path="M2_REPO/org/vaadin/addons/imagescaler/1.0/imagescaler-1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/my-chameleon.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/vaadin-chameleon-theme-1.0.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/twitter4j/twitter4j-core/2.1.7-SNAPSHOT/twitter4j-core-2.1.7-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
