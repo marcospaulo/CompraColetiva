@@ -14,7 +14,7 @@ public class BarraDeMenu extends HorizontalLayout {
 	private static final long serialVersionUID = -1829105028238130429L;
 
 	public BarraDeMenu() {
-
+//
 //		Button botaoOfertaAtual = new Button(ItensDaBarraDeMenu.OFERTA_DO_DIA
 //				.getNome());
 //		Button botaoOfertasAnteriores = new Button(

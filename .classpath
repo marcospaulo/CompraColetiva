@@ -18,7 +18,7 @@
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-tx/3.0.0.RELEASE/spring-tx-3.0.0.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-web/3.0.0.RELEASE/spring-web-3.0.0.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/vaadin/vaadin/6.4.7/vaadin-6.4.7.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/JVM 1.6.0 (MacOS X Default)">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/JVM 1.6.0">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.java"/>
 		</attributes>
@@ -26,7 +26,5 @@
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="var" path="M2_REPO/org/vaadin/addons/imagescaler/1.0/imagescaler-1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/my-chameleon.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/vaadin-chameleon-theme-1.0.1.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

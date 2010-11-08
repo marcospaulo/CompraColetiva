@@ -1,5 +1,6 @@
 package com.compracoletiva.view.main;
 
+import java.awt.Menu;
 import java.io.Serializable;
 
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Embedded;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Layout;
+import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.VerticalLayout;
 
 @Service
@@ -25,6 +27,8 @@ public class MainViewImpl implements MainView, Serializable {
 	private HorizontalLayout midLayout;
 	private HorizontalLayout botLayout;
 	private Button botaoEnviar;
+	
+	private MenuBar menubar;
 
 	@Override
 	public void init() {
@@ -54,13 +58,34 @@ public class MainViewImpl implements MainView, Serializable {
 //		e.setValue("<img style='width: 140; height: 70px;' src='/compracoletiva/VAADIN/themes/green-theme/img/GrandeLanceLogo.png'>");
 //		e.setData("<img style='width: 140; height: 70px;'  src='/compracoletiva/VAADIN/themes/green-theme/img/GrandeLanceLogo.png");
 
-		HorizontalLayout menu = new BarraDeMenu();
-		topLayout = new HorizontalLayout();
-//		topLayout.addComponent(e);
-		topLayout.addComponent(menu);
+		 menubar = new MenuBar();
+		
+		final MenuBar.MenuItem gl = menubar.addItem("GL", null);
+		final MenuBar.MenuItem lanceAnterior = menubar.addItem("Lane Anterior", null);
+		final MenuBar.MenuItem comoFuncionar = menubar.addItem("Como funciona", null);
+		final MenuBar.MenuItem contato = menubar.addItem("Contato", null);
+		final MenuBar.MenuItem conta = menubar.addItem("Conta", null);
+		final MenuBar.MenuItem buscar = menubar.addItem("Buscar", null);
+		menubar.setStyleName("barramenu");
+		menubar.setHeight("100%");
+		menubar.setWidth("100%");
+		
+		
+	    topLayout = new HorizontalLayout();
+		topLayout.addComponent(menubar);
 		topLayout.setStyleName("barrademenu");
-		topLayout.setHeight("85");
-		topLayout.setWidth("980");
+//		topLayout.setHeight("60");
+//		topLayout.setWidth("100%");
+		
+				
+		
+		
+//		topLayout = new HorizontalLayout();
+////		topLayout.addComponent(e);
+//		topLayout.addComponent(menu);
+//		topLayout.setStyleName("barrademenu");
+//		topLayout.setHeight("85");
+//		topLayout.setWidth("100%");
 	}
 
 	private void montarMidLayout() {

@@ -6,8 +6,9 @@
 }
 
 .barrademenu {
-	background-color: #E5EECC;
-	background-image: url(img/fundobarramenu.png);
+	background-color: #FFFFFF;
+	/*background-image: url(img/fundobarramenu.png);*/
+	background-color: #000000;
 	color: #000000;
 	background-repeat: no-repeat;
 	border: 1px solid #D4D4D4;
