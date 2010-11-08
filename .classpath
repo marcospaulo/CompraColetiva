@@ -26,5 +26,9 @@
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="var" path="M2_REPO/org/vaadin/addons/imagescaler/1.0/imagescaler-1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="var" path="M2_REPO/org/twitter4j/twitter4j-core/2.1.7-SNAPSHOT/twitter4j-core-2.1.7-SNAPSHOT.jar"/>
+>>>>>>> ccda275704379d359941bf89fd6249bc393a4520
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

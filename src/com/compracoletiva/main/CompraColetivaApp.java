@@ -1,7 +1,12 @@
 package com.compracoletiva.main;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import com.compracoletiva.presenters.MainPresenter;
+import com.compracoletiva.server.SessionHandler;
 import com.compracoletiva.spring.SpringHelper;
+import com.compracoletiva.view.main.TwitterForm;
 import com.vaadin.Application;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Layout;
@@ -20,7 +25,7 @@ public class CompraColetivaApp extends Application {
 	@Override
 	public void init() {
 		Window mainWindow = new Window("Compracoletiva Application");
-		
+
 		SpringHelper helper = SpringHelper.getInstance();
 		helper.startApplication(this);
 		mainPresenter = (MainPresenter) helper.getBean("myBean");
@@ -33,10 +38,12 @@ public class CompraColetivaApp extends Application {
 		vLayoutTotal.addComponent(mainView);
 		vLayoutTotal.setComponentAlignment(mainView, Alignment.TOP_CENTER);
 
-		
 		mainWindow.addComponent(vLayoutTotal);
 		setTheme("green-theme");
 		setMainWindow(mainWindow);
+
+		this.getContext().addTransactionListener(new SessionHandler(this));
+
 	}
 
 }
